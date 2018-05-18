@@ -1,2 +1,4 @@
 # pcoin
-Pcoin, coin made in NodeJS
+
+Bitcoin clone coding with JS.
+
