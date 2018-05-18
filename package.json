@@ -1,0 +1,10 @@
+{
+  "name": "pcoin",
+  "version": "1.0.0",
+  "description": "Pcoin, coin made in NodeJS",
+  "main": "SRC/server.js",
+  "repository": "https://github.com/daniel-s-kim/pcoin",
+  "author": "<danskimkor@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
