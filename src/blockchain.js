@@ -13,6 +13,7 @@ class Block {
     }
 }
 
+//hard coding genesis block
 const genesisBlock = new Block(
     0,
     '021014BF1BAC6039B90F7FDD941B46D70E4D17953F366E682C5445F061A919CD',
@@ -21,8 +22,10 @@ const genesisBlock = new Block(
     'This is the genesis!'
 );
 
+//define blockchain
 let blockchain = [genesisBlock];
 
+//get last block
 const getLastBlock = () => blockchain[blockchain.length -1]
 /*Same as
 function getLastBlock() {
@@ -30,11 +33,15 @@ function getLastBlock() {
 }
 */
 
+//get time stamp
 const getTimestamp = () => new Date().getTime() / 1000;
 
+//create hash
 const createHash = (index, previousHash, timestamp, data ) => 
     CryptoJS.SHA256(index+previousHash+timestamp+data).toString();
 
+
+//create new block
 
 const createNewBlock = data => {
     const previousBlock = getLastBlock();
@@ -50,3 +57,5 @@ const createNewBlock = data => {
     );
     return newBlock;
 };
+
+//validating system
